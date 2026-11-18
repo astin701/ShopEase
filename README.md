@@ -215,6 +215,44 @@ The application uses MySQL to manage:
 
 ## 📸 Screenshots
 
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
+
+### 🛍️ Products Page
+![Products Page](screenshots/products.png)
+
+### 🛒 Shopping Cart
+![Shopping Cart](screenshots/cart.png)
+
+### ❤️ Wishlist
+![Wishlist](screenshots/wishlist.png)
+
+### 💳 Checkout
+![Checkout](screenshots/checkout.png)
+
+### 📋 Order History
+![Order History](screenshots/orders.png)
+
+---
+
+### 🔐 Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### 📦 Admin Product Management
+![Admin Products](screenshots/admin-products.png)
+
+### 🗂️ Admin Category Management
+![Admin Categories](screenshots/admin-categories.png)
+
+### 👥 Admin User Management
+![Admin Users](screenshots/admin-users.png)
+
+### 📋 Admin Order Management
+![Admin Orders](screenshots/admin-orders.png)
+
+### ⚙️ Admin Profile
+![Admin Profile](screenshots/admin-profile.png)
+
 Screenshots of the following application pages can be added here:
 
 - Home Page
