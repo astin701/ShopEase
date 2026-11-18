@@ -1,0 +1,111 @@
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    background-color: #ffffff !important;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-brand {
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    letter-spacing: -1px;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--dark-color) !important;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* =================================
+   NAVBAR BADGES
+================================= */
+
+.navbar .badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 7px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+/* =================================
+   USER DROPDOWN
+================================= */
+
+.navbar .dropdown-menu {
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.navbar .dropdown-item {
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* =================================
+   NAVBAR TOGGLER
+================================= */
+
+.navbar-toggler {
+    border: 1px solid var(--primary-color);
+    padding: 6px 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.15);
+}
+
+.navbar-toggler-icon {
+    filter: invert(48%) sepia(95%) saturate(2000%)
+            hue-rotate(359deg) brightness(100%);
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        align-items: flex-start;
+        padding-top: 12px;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .navbar .dropdown-menu {
+        box-shadow: none;
+        border: 1px solid #eeeeee;
+    }
+
+}

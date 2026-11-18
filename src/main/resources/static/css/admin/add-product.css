@@ -1,0 +1,354 @@
+/* =================================
+   ADD PRODUCT PAGE
+================================= */
+
+.add-product-content {
+    padding: 30px;
+    min-height: calc(100vh - 170px);
+}
+
+
+/* =================================
+   PAGE HEADING
+================================= */
+
+.add-product-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.add-product-heading h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.add-product-heading p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   BACK TO PRODUCTS BUTTON
+================================= */
+
+.back-products-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #fff;
+    color: #ff6b00;
+    border: 1px solid #ff6b00;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-products-btn:hover {
+    background: #ff6b00;
+    color: #fff;
+}
+
+
+/* =================================
+   ADD PRODUCT CARD
+================================= */
+
+.add-product-card {
+    max-width: 900px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =================================
+   FORM CARD HEADING
+================================= */
+
+.form-card-heading {
+    padding-bottom: 22px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-card-heading h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 7px;
+}
+
+.form-card-heading h4 i {
+    color: #ff6b00;
+    font-size: 21px;
+}
+
+.form-card-heading p {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   FORM GROUP
+================================= */
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 9px;
+}
+
+.form-group label span {
+    color: #dc2626;
+}
+
+.form-group small {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    margin-top: 7px;
+}
+
+
+/* =================================
+   INPUT FIELDS
+================================= */
+
+.form-group .form-control,
+.form-group .form-select {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    outline: none;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.form-group .form-control::placeholder {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.form-group .form-control:focus,
+.form-group .form-select:focus {
+    border-color: #ff6b00;
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+
+/* =================================
+   NUMBER INPUT
+================================= */
+
+.form-group input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* =================================
+   FORM ACTIONS
+================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding-top: 22px;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+
+/* =================================
+   RESET BUTTON
+================================= */
+
+.reset-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+    background: #f1f1f1;
+    color: #555;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reset-btn:hover {
+    background: #ddd;
+    color: #222;
+}
+
+
+/* =================================
+   ADD PRODUCT BUTTON
+================================= */
+
+.submit-product-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 22px;
+    background: #ff6b00;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-product-btn:hover {
+    background: #e65f00;
+    transform: translateY(-2px);
+}
+
+.submit-product-btn:disabled {
+    background: #ffb27f;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =================================
+   ADMIN FOOTER
+================================= */
+
+.admin-footer {
+    padding: 20px 30px;
+    margin-top: 30px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.admin-footer p {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+.admin-footer span {
+    color: #ff6b00;
+    font-weight: 600;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 991px) {
+
+    .add-product-content {
+        padding: 25px 20px;
+    }
+
+    .add-product-card {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .add-product-heading h2 {
+        font-size: 22px;
+    }
+
+    .add-product-card {
+        padding: 22px;
+    }
+
+    .form-card-heading h4 {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .add-product-content {
+        padding: 20px 12px;
+    }
+
+    .add-product-heading {
+        align-items: flex-start;
+    }
+
+    .back-products-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .add-product-card {
+        padding: 17px;
+        border-radius: 10px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .reset-btn,
+    .submit-product-btn {
+        width: 100%;
+    }
+
+    .admin-footer {
+        padding: 18px 12px;
+    }
+
+    .admin-footer p {
+        font-size: 12px;
+    }
+
+}

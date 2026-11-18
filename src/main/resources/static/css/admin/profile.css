@@ -1,0 +1,331 @@
+/* =========================================
+   PROFILE LAYOUT
+========================================= */
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.profile-card-header {
+    padding: 35px 25px 25px;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.profile-avatar {
+    width: 95px;
+    height: 95px;
+    background: #fff0e6;
+    color: #ff6b00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    margin: 0 auto 18px;
+}
+
+.profile-card-header h4 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 7px;
+}
+
+.profile-card-header p {
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 15px;
+    word-break: break-word;
+}
+
+.profile-role {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff0e6;
+    color: #ff6b00;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile-card-body {
+    padding: 22px 25px;
+}
+
+.profile-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #198754;
+    margin-bottom: 12px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #198754;
+    border-radius: 50%;
+}
+
+.profile-card-body p {
+    font-size: 12px;
+    color: #888888;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================================
+   PROFILE DETAILS CARD
+========================================= */
+
+.profile-details-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.profile-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.profile-section-header h4 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 6px;
+}
+
+.profile-section-header p {
+    font-size: 12px;
+    color: #888888;
+    margin: 0;
+}
+
+
+/* =========================================
+   EDIT PROFILE BUTTON
+========================================= */
+
+.edit-profile-btn {
+    background: #ff6b00;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+    background: #e65f00;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   PROFILE INFORMATION GRID
+========================================= */
+
+.profile-information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.profile-info-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background: #fff0e6;
+    color: #ff6b00;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.profile-info-item span {
+    display: block;
+    font-size: 11px;
+    color: #999999;
+    margin-bottom: 5px;
+}
+
+.profile-info-item h6 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   SECURITY CARD
+========================================= */
+
+.profile-security-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.profile-security-card .profile-section-header {
+    margin-bottom: 22px;
+}
+
+.security-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    background: #fafafa;
+    border-radius: 10px;
+}
+
+.security-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background: #fff0e6;
+    color: #ff6b00;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.security-content {
+    flex: 1;
+}
+
+.security-content h6 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.security-content p {
+    font-size: 11px;
+    color: #888888;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CHANGE PASSWORD BUTTON
+========================================= */
+
+.change-password-btn {
+    background: #ffffff;
+    color: #ff6b00;
+    border: 1px solid #ff6b00;
+    border-radius: 7px;
+    padding: 9px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.change-password-btn:hover {
+    background: #ff6b00;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .profile-details-card,
+    .profile-security-card {
+        padding: 18px;
+    }
+
+    .profile-section-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .profile-information-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .security-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .security-content {
+        flex-basis: calc(100% - 65px);
+    }
+
+    .change-password-btn {
+        width: 100%;
+    }
+
+}

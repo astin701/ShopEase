@@ -1,0 +1,376 @@
+/* =================================
+   PRODUCT DETAILS PAGE
+================================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    color: #222222;
+}
+
+
+/* =================================
+   BACK LINK
+================================= */
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #ff6b00;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #e65f00;
+    transform: translateX(-4px);
+}
+
+
+/* =================================
+   PRODUCT DETAILS CARD
+================================= */
+
+.details-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 35px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.details-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =================================
+   PRODUCT IMAGE
+================================= */
+
+.details-image {
+    min-height: 350px;
+    background: linear-gradient(135deg, #fff3e8, #ffe0c2);
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.details-image span {
+    font-size: 120px;
+    transition: transform 0.3s;
+}
+
+.details-image:hover span {
+    transform: scale(1.12);
+}
+
+
+/* =================================
+   PRODUCT INFORMATION
+================================= */
+
+.details-info {
+    padding: 10px;
+}
+
+.details-info h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+
+/* =================================
+   PRODUCT CATEGORY
+================================= */
+
+.details-category {
+    display: inline-block;
+    background: #fff3e8;
+    color: #ff6b00;
+
+    padding: 6px 15px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =================================
+   PRODUCT PRICE
+================================= */
+
+.details-price {
+    color: #ff6b00;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   PRODUCT DESCRIPTION
+================================= */
+
+.details-description {
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   STOCK STATUS
+================================= */
+
+.stock-available {
+    color: #198754;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.stock-unavailable {
+    color: #dc3545;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+/* =================================
+   QUANTITY INPUT
+================================= */
+
+.quantity-input {
+    width: 90px;
+    height: 42px;
+
+    border-radius: 7px;
+    border: 1px solid #dddddd;
+
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.quantity-input:focus {
+    border-color: #ff6b00;
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.12);
+}
+
+.quantity-input:disabled {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+}
+
+
+/* =================================
+   ADD TO CART BUTTON
+================================= */
+
+.add-cart-btn {
+    width: 100%;
+
+    background: #ff6b00;
+    color: #ffffff;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 7px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background: #e65f00;
+    transform: translateY(-2px);
+}
+
+.add-cart-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =================================
+   ADD TO WISHLIST BUTTON
+================================= */
+
+#add-wishlist-btn {
+    width: 100%;
+    border-radius: 7px;
+    padding: 11px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+#add-wishlist-btn:hover {
+    transform: translateY(-2px);
+}
+
+#add-wishlist-btn:disabled {
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =================================
+   CART MESSAGE
+================================= */
+
+#cart-message {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#cart-message p {
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   LOADING SPINNER
+================================= */
+
+.spinner-border {
+    color: #ff6b00 !important;
+}
+
+
+/* =================================
+   ERROR MESSAGE
+================================= */
+
+.alert-danger {
+    border-radius: 10px;
+}
+
+.alert-danger a {
+    color: #ff6b00;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.alert-danger a:hover {
+    text-decoration: underline;
+}
+
+/* =================================
+   PRODUCT DETAILS IMAGE
+================================= */
+
+.details-image {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.details-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.details-image span {
+    font-size: 80px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 992px) {
+
+    .details-card {
+        padding: 25px;
+    }
+
+    .details-image {
+        min-height: 300px;
+    }
+
+    .details-image span {
+        font-size: 100px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .details-card {
+        padding: 20px;
+    }
+
+    .details-image {
+        min-height: 250px;
+        margin-bottom: 15px;
+    }
+
+    .details-image span {
+        font-size: 90px;
+    }
+
+    .details-info {
+        padding: 5px;
+    }
+
+    .details-info h2 {
+        font-size: 24px;
+    }
+
+    .details-price {
+        font-size: 24px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .details-card {
+        padding: 15px;
+    }
+
+    .details-image {
+        min-height: 200px;
+    }
+
+    .details-image span {
+        font-size: 75px;
+    }
+
+    .details-info h2 {
+        font-size: 21px;
+    }
+
+    .details-price {
+        font-size: 22px;
+    }
+
+}

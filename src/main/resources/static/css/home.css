@@ -1,0 +1,104 @@
+/* =================================
+   HOME PAGE HERO
+================================= */
+
+.hero-badge {
+    display: inline-block;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-visual {
+    min-height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-emoji {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 130px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero-floating-card {
+    position: absolute;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-one {
+    top: 30px;
+    right: 10px;
+}
+
+.card-two {
+    bottom: 40px;
+    left: 0;
+}
+
+.card-three {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* =================================
+   CATEGORY ICONS
+================================= */
+
+.category-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 576px) {
+
+    .hero-visual {
+        min-height: 280px;
+        margin-top: 25px;
+    }
+
+    .hero-emoji {
+        width: 190px;
+        height: 190px;
+        font-size: 95px;
+    }
+
+    .hero-floating-card {
+        font-size: 11px;
+        padding: 9px 12px;
+    }
+
+    .card-one {
+        right: 0;
+    }
+
+    .card-two {
+        left: 0;
+    }
+
+    .card-three {
+        right: 0;
+    }
+
+}

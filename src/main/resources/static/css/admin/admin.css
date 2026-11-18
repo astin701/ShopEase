@@ -1,0 +1,371 @@
+/* =================================
+   GOOGLE FONT
+================================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+/* =================================
+   COMMON RESET
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =================================
+   ADMIN WRAPPER
+================================= */
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.admin-sidebar {
+    width: 260px;
+    min-width: 260px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #eeeeee;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* =================================
+   ADMIN BRAND
+================================= */
+
+.admin-brand {
+    padding: 28px 25px 25px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.admin-brand a {
+    font-size: 27px;
+    font-weight: 700;
+    color: #ff6b00;
+}
+
+.admin-brand a span {
+    color: #222222;
+}
+
+.admin-brand p {
+    margin: 5px 0 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #888888;
+}
+
+
+/* =================================
+   SIDEBAR NAVIGATION
+================================= */
+
+.admin-navigation {
+    padding: 25px 15px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-heading {
+    font-size: 10px;
+    font-weight: 600;
+    color: #999999;
+    letter-spacing: 1.2px;
+    margin: 18px 12px 12px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    width: 100%;
+    padding: 12px 15px;
+
+    margin-bottom: 6px;
+
+    color: #666666;
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.sidebar-link i {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+}
+
+.sidebar-link:hover {
+    color: #ff6b00;
+    background-color: #fff3eb;
+}
+
+.sidebar-link.active {
+    color: #ffffff;
+    background-color: #ff6b00;
+    font-weight: 600;
+}
+
+
+/* =================================
+   SIDEBAR BOTTOM
+================================= */
+
+.sidebar-bottom {
+    padding: 15px;
+    border-top: 1px solid #eeeeee;
+}
+
+.logout-link {
+    color: #dc3545;
+}
+
+.logout-link:hover {
+    color: #ffffff;
+    background-color: #dc3545;
+}
+
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.admin-main {
+    width: calc(100% - 260px);
+    min-height: 100vh;
+    margin-left: 260px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* =================================
+   TOPBAR
+================================= */
+
+.admin-topbar {
+    height: 85px;
+    background-color: #ffffff;
+
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar-left h5 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    color: #222222;
+}
+
+.topbar-left p {
+    font-size: 12px;
+    color: #999999;
+    margin: 4px 0 0;
+}
+
+
+/* =================================
+   SIDEBAR TOGGLE BUTTON
+================================= */
+
+.sidebar-toggle {
+    width: 38px;
+    height: 38px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #fff3eb;
+    color: #ff6b00;
+
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+    background-color: #ff6b00;
+    color: #ffffff;
+}
+
+
+/* =================================
+   ADMIN PROFILE
+================================= */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #fff0e5;
+    color: #ff6b00;
+
+    font-size: 21px;
+}
+
+.admin-profile-info h6 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.admin-profile-info span {
+    font-size: 11px;
+    color: #999999;
+}
+
+/* =================================
+   DASHBOARD FOOTER
+================================= */
+
+.admin-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 50px;
+    border-top: 1px solid #eeeeee;
+}
+
+.admin-footer p {
+    font-size: 11px;
+    color: #999999;
+    margin: 0;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 991px) {
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .admin-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .sidebar-toggle {
+        display: flex;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .admin-topbar {
+        height: 75px;
+        padding: 0 15px;
+    }
+
+    .topbar-left {
+        gap: 10px;
+    }
+
+    .topbar-left h5 {
+        font-size: 15px;
+    }
+
+    .topbar-left p {
+        font-size: 10px;
+    }
+
+    .admin-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .admin-profile-info h6 {
+        font-size: 11px;
+    }
+
+    .admin-profile-info span {
+        font-size: 10px;
+    }
+
+}

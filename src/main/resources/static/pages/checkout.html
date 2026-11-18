@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Complete your ShopEase order securely.">
+
+    <title>ShopEase | Checkout</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../css/checkout.css">
+
+</head>
+
+<body>
+
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="../index.html">
+                ShopEase<span>.</span>
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="wishlist.html">
+                            Wishlist ❤️
+                            <span id="wishlist-nav-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cart.html">
+                            Cart 🛒
+                            <span id="cart-count" class="badge bg-warning text-dark">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="address.html">
+                            Addresses
+                        </a>
+                    </li>
+
+                    <li class="nav-item" id="auth-links">
+                        <a class="nav-link" href="login.html">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item" id="register-link">
+                        <a class="nav-link" href="register.html">
+                            Register
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-none" id="user-menu">
+                        <span class="nav-link" id="welcome-user"></span>
+                    </li>
+
+                    <li class="nav-item d-none" id="orders-link">
+                        <a class="nav-link" href="orders.html">
+                            My Orders
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-none" id="logout-link">
+                        <button type="button"
+                            class="btn btn-outline-primary btn-sm"
+                            onclick="logoutUser()">
+                            Logout
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =================================
+         CHECKOUT HEADER
+    ================================== -->
+
+    <main>
+
+        <section class="checkout-section">
+
+            <div class="container">
+
+                <div class="checkout-heading">
+
+                    <span class="checkout-badge">
+                        🛒 Almost There!
+                    </span>
+
+                    <h1>Complete Your Order</h1>
+
+                    <p>
+                        Choose your delivery address and confirm your order.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                     CHECKOUT MESSAGE
+                ================================== -->
+
+                <div id="checkout-message" class="mb-4" aria-live="polite"></div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- =================================
+                         LEFT SECTION
+                    ================================== -->
+
+                    <div class="col-lg-8">
+
+
+                        <!-- DELIVERY ADDRESS -->
+
+                        <div class="checkout-card">
+
+                            <div class="checkout-card-heading">
+
+                                <div class="checkout-icon">
+                                    📍
+                                </div>
+
+                                <div>
+                                    <h4>Delivery Address</h4>
+
+                                    <p>
+                                        Select where you want your order delivered.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div id="address-loading" class="text-center py-4">
+
+                                <div class="spinner-border text-warning" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+
+                                <p class="mt-2 text-muted">
+                                    Loading your addresses...
+                                </p>
+
+                            </div>
+
+
+                            <!-- Addresses generated by JavaScript -->
+
+                            <div id="address-container">
+
+                            </div>
+
+
+                            <!-- Empty Address -->
+
+                            <div id="empty-address" class="empty-checkout-state d-none">
+
+                                <div class="empty-icon">
+                                    🏠
+                                </div>
+
+                                <h5>No Saved Addresses</h5>
+
+                                <p>
+                                    Please add a delivery address before placing your order.
+                                </p>
+
+                            </div>
+
+
+                            <a href="address.html" class="add-address-link">
+                                + Manage Delivery Addresses
+                            </a>
+
+                        </div>
+
+
+                        <!-- =================================
+                             PAYMENT METHOD
+                        ================================== -->
+
+                        <div class="checkout-card mt-4">
+
+                            <div class="checkout-card-heading">
+
+                                <div class="checkout-icon">
+                                    💳
+                                </div>
+
+                                <div>
+                                    <h4>Payment Method</h4>
+
+                                    <p>
+                                        Choose your preferred payment method.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="payment-options">
+
+
+                                <!-- CASH ON DELIVERY -->
+
+                                <label class="payment-option selected">
+
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        id="payment-cod"
+                                        value="COD"
+                                        checked>
+
+                                    <div class="payment-option-content">
+
+                                        <span class="payment-icon">
+                                            💵
+                                        </span>
+
+                                        <div>
+
+                                            <h6>Cash on Delivery</h6>
+
+                                            <p>
+                                                Pay when your order arrives.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                    <span class="payment-status">
+                                        Available
+                                    </span>
+
+                                </label>
+
+
+                                <!-- UPI -->
+
+                                <label class="payment-option disabled-option">
+
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        value="UPI"
+                                        disabled>
+
+                                    <div class="payment-option-content">
+
+                                        <span class="payment-icon">
+                                            📱
+                                        </span>
+
+                                        <div>
+
+                                            <h6>UPI Payment</h6>
+
+                                            <p>
+                                                Google Pay, PhonePe and Paytm.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                    <span class="coming-soon">
+                                        Coming Soon
+                                    </span>
+
+                                </label>
+
+
+                                <!-- CARD -->
+
+                                <label class="payment-option disabled-option">
+
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        value="CARD"
+                                        disabled>
+
+                                    <div class="payment-option-content">
+
+                                        <span class="payment-icon">
+                                            💳
+                                        </span>
+
+                                        <div>
+
+                                            <h6>Credit / Debit Card</h6>
+
+                                            <p>
+                                                Pay using your bank card.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                    <span class="coming-soon">
+                                        Coming Soon
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =================================
+                         RIGHT SECTION
+                    ================================== -->
+
+                    <div class="col-lg-4">
+
+
+                        <!-- ORDER SUMMARY -->
+
+                        <div class="checkout-card order-summary-card">
+
+                            <div class="checkout-card-heading">
+
+                                <div class="checkout-icon">
+                                    📦
+                                </div>
+
+                                <div>
+                                    <h4>Order Summary</h4>
+
+                                    <p>
+                                        Review your selected products.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Cart Loading -->
+
+                            <div id="cart-loading" class="text-center py-4">
+
+                                <div class="spinner-border text-warning" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+
+                                <p class="mt-2 text-muted">
+                                    Loading cart items...
+                                </p>
+
+                            </div>
+
+
+                            <!-- Cart Items generated by JavaScript -->
+
+                            <div id="checkout-items">
+
+                            </div>
+
+
+                            <hr>
+
+
+                            <!-- PRICE DETAILS -->
+
+                            <div class="price-details">
+
+                                <div class="price-row">
+
+                                    <span>Subtotal</span>
+
+                                    <strong id="checkout-subtotal">
+                                        ₹0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="price-row">
+
+                                    <span>Shipping</span>
+
+                                    <strong id="checkout-shipping">
+                                        FREE
+                                    </strong>
+
+                                </div>
+
+
+                                <hr>
+
+
+                                <div class="price-row total-row">
+
+                                    <span>Total Amount</span>
+
+                                    <strong id="checkout-total">
+                                        ₹0.00
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PLACE ORDER BUTTON -->
+
+                            <button
+                                type="button"
+                                id="place-order-btn"
+                                class="place-order-btn"
+                                disabled>
+
+                                Place Order
+
+                            </button>
+
+
+                            <a href="cart.html" class="continue-shopping-link">
+                                ← Return to Cart
+                            </a>
+
+
+                            <div class="secure-checkout">
+
+                                🔒 Secure Checkout
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <h4>ShopEase</h4>
+
+                    <p>
+                        Your favourite shopping destination.
+                        Discover quality products at amazing prices.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>Quick Links</h5>
+
+                    <p>
+                        <a href="../index.html">Home</a>
+                    </p>
+
+                    <p>
+                        <a href="products.html">Products</a>
+                    </p>
+
+                    <p>
+                        <a href="wishlist.html">Wishlist</a>
+                    </p>
+
+                    <p>
+                        <a href="cart.html">Cart</a>
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>Account</h5>
+
+                    <p>
+                        <a href="login.html">Login</a>
+                    </p>
+
+                    <p>
+                        <a href="register.html">Register</a>
+                    </p>
+
+                    <p>
+                        <a href="orders.html">My Orders</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <p class="copyright mb-0">
+                © 2026 ShopEase. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar JS -->
+    <script src="../js/navbar.js"></script>
+
+    <!-- Checkout JS -->
+    <script src="../js/checkout.js"></script>
+
+</body>
+
+</html>

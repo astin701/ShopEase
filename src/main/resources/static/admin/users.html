@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase | Admin Users</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="../css/admin/admin.css">
+    <link rel="stylesheet" href="../css/admin/users.css">
+
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="admin-sidebar" id="admin-sidebar">
+
+            <!-- Brand -->
+
+            <div class="admin-brand">
+                <a href="dashboard.html">
+                    <!-- <i class="bi bi-shop"></i> -->
+                    Shop<span>Ease</span>
+                </a>
+                <p>ADMIN PANEL</p>
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="admin-navigation">
+
+                <p class="sidebar-heading">MAIN MENU</p>
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="products.html" class="sidebar-link">
+                    <i class="bi bi-box-seam"></i>
+                    <span>Products</span>
+                </a>
+
+                <a href="categories.html" class="sidebar-link">
+                    <i class="bi bi-tags"></i>
+                    <span>Categories</span>
+                </a>
+
+
+                <p class="sidebar-heading management-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="users.html" class="sidebar-link active">
+                    <i class="bi bi-people"></i>
+                    <span>Users</span>
+                </a>
+
+                <a href="orders.html" class="sidebar-link">
+                    <i class="bi bi-cart-check"></i>
+                    <span>Orders</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <a href="../index.html" class="sidebar-link">
+                    <i class="bi bi-shop-window"></i>
+                    <span>Visit Store</span>
+                </a>
+
+                <button class="sidebar-link logout-link" id="admin-logout-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================
+                 TOPBAR
+            ================================== -->
+
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div>
+                        <h5>User Management</h5>
+                        <p>Manage registered customers and their accounts.</p>
+                    </div>
+                </div>
+                <div class="topbar-right">
+
+                    <div class="admin-profile">
+
+                        <div class="admin-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div class="admin-profile-info">
+                            <h6 id="admin-name">Administrator</h6>
+                            <span>Admin</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </header>
+
+
+             <!-- =====================================
+                 USERS CONTENT
+            ====================================== -->
+
+            <section class="users-content">
+
+
+                <!-- Page Heading -->
+
+                <div class="users-heading">
+
+                    <div>
+                        
+                        <h2>Users</h2>
+                        
+                    </div>
+
+                    <button type="button"
+                        class="btn btn-primary"
+                        id="refresh-users-btn">
+
+                        <i class="bi bi-arrow-clockwise"></i>
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+                <!-- =====================================
+                     USER STATISTICS
+                ====================================== -->
+
+                <div class="row g-4 users-statistics">
+
+
+                    <!-- Total Users -->
+
+                    <div class="col-xl-4 col-md-6">
+
+                        <div class="user-stat-card">
+
+                            <div class="user-stat-icon total-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+
+                            <div>
+                                <p>Total Users</p>
+                                <h3 id="total-users">0</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Active Users -->
+
+                    <div class="col-xl-4 col-md-6">
+
+                        <div class="user-stat-card">
+
+                            <div class="user-stat-icon active-icon">
+                                <i class="bi bi-person-check"></i>
+                            </div>
+
+                            <div>
+                                <p>Active Users</p>
+                                <h3 id="active-users">0</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Inactive Users -->
+
+                    <div class="col-xl-4 col-md-6">
+
+                        <div class="user-stat-card">
+
+                            <div class="user-stat-icon inactive-icon">
+                                <i class="bi bi-person-x"></i>
+                            </div>
+
+                            <div>
+                                <p>Inactive Users</p>
+                                <h3 id="inactive-users">0</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =====================================
+                     USERS TABLE SECTION
+                ====================================== -->
+
+                <div class="users-table-card">
+
+
+                    <!-- Table Header -->
+
+                    <div class="users-table-header">
+
+                        <div>
+                            <h5>Registered Users</h5>
+
+                            <p>
+                                Manage your ShopEase customer accounts.
+                            </p>
+                        </div>
+
+
+                        <!-- Search and Filter -->
+
+                        <div class="users-filters">
+
+                            <div class="user-search-box">
+
+                                <i class="bi bi-search"></i>
+
+                                <input type="text"
+                                    id="user-search"
+                                    placeholder="Search users...">
+
+                            </div>
+
+
+                            <select id="user-status-filter"
+                                class="form-select">
+
+                                <option value="ALL">
+                                    All Users
+                                </option>
+
+                                <option value="ACTIVE">
+                                    Active
+                                </option>
+
+                                <option value="INACTIVE">
+                                    Inactive
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Table -->
+
+                    <div class="table-responsive">
+
+                        <table class="table users-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>ID</th>
+
+                                    <th>User</th>
+
+                                    <th>Email</th>
+
+                                    <th>Phone</th>
+
+                                    <th>Role</th>
+
+                                    <th>Status</th>
+
+                                    <th>Joined</th>
+
+                                    <th>Actions</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="users-table-body">
+
+                                <!-- JavaScript loads users here -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- Empty State -->
+
+                    <div class="empty-users d-none"
+                        id="empty-users">
+
+                        <i class="bi bi-people"></i>
+
+                        <h5>No Users Found</h5>
+
+                        <p>
+                            No registered users match your search.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Table Footer -->
+
+                    <div class="users-table-footer">
+
+                        <span id="users-count">
+                            0 users
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 FOOTER
+            ================================== -->
+
+            <footer class="admin-footer">
+
+                    <p>
+                        &copy; 2026 ShopEase. All Rights Reserved.
+                    </p>
+
+                    <p>
+                        Admin Dashboard
+                    </p>
+
+                </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =================================
+         SCRIPTS
+    ================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin/admin.js"></script>
+    <script src="../js/admin/users.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase | Register</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../css/auth.css">
+
+</head>
+
+<body>
+
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="../index.html">
+                ShopEase
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="wishlist.html">
+                            Wishlist ❤️
+                            <span id="wishlist-nav-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            Cart 🛒
+                            <span id="cart-count" class="badge bg-warning text-dark">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" id="auth-links">
+                        <a class="nav-link" href="login.html">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item" id="register-link">
+                        <a class="nav-link active" href="register.html">
+                            Register
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-none" id="user-menu">
+                        <span class="nav-link" id="welcome-user"></span>
+                    </li>
+
+                    <li class="nav-item d-none" id="orders-link">
+                        <a class="nav-link" href="orders.html">
+                            My Orders
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-none" id="logout-link">
+
+                        <button class="btn btn-outline-primary btn-sm"
+                            onclick="logoutUser()">
+                            Logout
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div> -->
+
+        </div>
+
+    </nav>
+
+
+    <!-- =================================
+         REGISTER SECTION
+    ================================== -->
+
+    <section class="auth-section">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-5 col-md-7 col-sm-10">
+
+                    <div class="auth-card">
+
+                        <div class="text-center mb-4">
+
+                            <div class="register-icon mb-3">
+                                🛍️
+                            </div>
+
+                            <h2>Create Account</h2>
+
+                            <p>
+                                Join ShopEase and start shopping today!
+                            </p>
+
+                        </div>
+
+
+                        <!-- REGISTER FORM -->
+
+                        <form id="register-form">
+
+                            <!-- Full Name -->
+
+                            <div class="mb-3">
+
+                                <label for="name" class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="Enter your full name"
+                                    minlength="3"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Email -->
+
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Phone Number -->
+
+                            <div class="mb-3">
+
+                                <label for="phoneNumber" class="form-label">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel"
+                                    class="form-control"
+                                    id="phoneNumber"
+                                    placeholder="Enter 10-digit phone number"
+                                    pattern="[0-9]{10}"
+                                    maxlength="10"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Password -->
+
+                            <div class="mb-3">
+
+                                <label for="password" class="form-label">
+                                    Password
+                                </label>
+
+                                <input type="password"
+                                    class="form-control"
+                                    id="password"
+                                    placeholder="Create a password"
+                                    minlength="8"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Confirm Password -->
+
+                            <div class="mb-3">
+
+                                <label for="confirm-password" class="form-label">
+                                    Confirm Password
+                                </label>
+
+                                <input type="password"
+                                    class="form-control"
+                                    id="confirm-password"
+                                    placeholder="Confirm your password"
+                                    minlength="8"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Show Password -->
+
+                            <div class="form-check mb-4">
+
+                                <input class="form-check-input"
+                                    type="checkbox"
+                                    id="show-password">
+
+                                <label class="form-check-label"
+                                    for="show-password">
+                                    Show Password
+                                </label>
+
+                            </div>
+
+
+                            <!-- REGISTER BUTTON -->
+
+                            <button type="submit"
+                                class="btn btn-login w-100"
+                                id="register-btn">
+
+                                Create Account
+
+                            </button>
+
+
+                            <!-- LOGIN LINK -->
+
+                            <p class="text-center mt-4 mb-0">
+
+                                Already have an account?
+
+                                <a href="login.html">
+                                    Login
+                                </a>
+
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <h4>ShopEase</h4>
+
+                    <p>
+                        Your favourite shopping destination.
+                        Discover quality products at amazing prices.
+                    </p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Quick Links</h5>
+
+                    <p><a href="../index.html">Home</a></p>
+
+                    <p><a href="products.html">Products</a></p>
+
+                    <p><a href="wishlist.html">Wishlist</a></p>
+
+                    <p><a href="cart.html">Cart</a></p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Account</h5>
+
+                    <p><a href="login.html">Login</a></p>
+
+                    <p><a href="register.html">Register</a></p>
+
+                    <p><a href="orders.html">My Orders</a></p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright mb-0">
+                © 2026 ShopEase. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Authentication JS -->
+
+    <script src="../js/auth.js"></script>
+
+    <!-- Navbar JS -->
+
+    <script src="../js/navbar.js"></script>
+
+
+    <!-- Show Password -->
+
+    <script>
+
+        const passwordInput = document.getElementById("password");
+
+        const confirmPasswordInput = document.getElementById("confirm-password");
+
+        const showPassword = document.getElementById("show-password");
+
+        showPassword.addEventListener("change", function () {
+
+            const inputType = this.checked ? "text" : "password";
+
+            passwordInput.type = inputType;
+
+            confirmPasswordInput.type = inputType;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

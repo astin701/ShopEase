@@ -1,0 +1,513 @@
+/* =================================
+   DASHBOARD CONTENT
+================================= */
+
+.dashboard-content {
+    padding: 30px 35px;
+}
+
+
+/* =================================
+   DASHBOARD HEADING
+================================= */
+
+.dashboard-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.dashboard-heading h2 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 7px;
+}
+
+.dashboard-heading p {
+    font-size: 13px;
+    color: #999999;
+    margin: 0;
+}
+
+.dashboard-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 13px;
+    border-radius: 20px;
+    background-color: #e9f8ef;
+    color: #198754;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.dashboard-badge i {
+    font-size: 8px;
+}
+
+
+/* =================================
+   STATISTICS CARDS
+================================= */
+
+.dashboard-stats {
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    height: 100%;
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.products-icon {
+    color: #ff6b00;
+    background-color: #fff0e5;
+}
+
+.users-icon {
+    color: #0d6efd;
+    background-color: #e8f1ff;
+}
+
+.orders-icon {
+    color: #198754;
+    background-color: #e8f7ef;
+}
+
+.revenue-icon {
+    color: #8e44ad;
+    background-color: #f4eafa;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 500;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #999999;
+    margin: 0;
+}
+
+
+/* =================================
+   REVENUE & SALES ANALYTICS
+================================= */
+
+.analytics-section {
+    margin-bottom: 35px;
+}
+
+.analytics-card {
+    height: 100%;
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.analytics-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.analytics-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.analytics-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 21px;
+}
+
+.sales-icon {
+    color: #0d6efd;
+    background-color: #e8f1ff;
+}
+
+.today-icon {
+    color: #198754;
+    background-color: #e8f7ef;
+}
+
+.monthly-icon {
+    color: #8e44ad;
+    background-color: #f4eafa;
+}
+
+.average-icon {
+    color: #ff6b00;
+    background-color: #fff0e5;
+}
+
+.analytics-label {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 500;
+}
+
+.analytics-card h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.analytics-card p {
+    font-size: 12px;
+    color: #999999;
+    margin: 0;
+}
+
+
+/* =================================
+   DASHBOARD SECTIONS
+================================= */
+
+.dashboard-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.section-heading h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    color: #999999;
+    margin: 0;
+}
+
+
+/* =================================
+   QUICK ACTION CARDS
+================================= */
+
+.quick-action-card {
+    min-height: 125px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    padding: 18px 15px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.quick-action-card:hover {
+    border-color: #ff6b00;
+    background-color: #fffaf6;
+    transform: translateY(-3px);
+}
+
+.quick-action-icon {
+    min-width: 38px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background-color: #fff0e5;
+    color: #ff6b00;
+    font-size: 18px;
+}
+
+.quick-action-card h6 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333333;
+    margin: 2px 0 7px;
+}
+
+.quick-action-card p {
+    font-size: 10px;
+    line-height: 1.6;
+    color: #999999;
+    margin: 0;
+}
+
+.quick-action-arrow {
+    position: absolute;
+    right: 13px;
+    bottom: 12px;
+    font-size: 13px;
+    color: #ff6b00;
+}
+
+
+/* =================================
+   VIEW ALL BUTTON
+================================= */
+
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ff6b00;
+    transition: color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    color: #e65f00;
+}
+
+
+/* =================================
+   RECENT ORDERS TABLE
+================================= */
+
+.recent-orders-section {
+    overflow: hidden;
+}
+
+.recent-orders-table {
+    min-width: 650px;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.recent-orders-table thead th {
+    padding: 15px 12px;
+    background-color: #fff8f3;
+    color: #666666;
+    font-size: 11px;
+    font-weight: 600;
+    border-bottom: 1px solid #eeeeee;
+    white-space: nowrap;
+}
+
+.recent-orders-table tbody td {
+    padding: 15px 12px;
+    color: #555555;
+    font-size: 12px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.recent-orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.recent-orders-table tbody tr:hover {
+    background-color: #fffaf6;
+}
+
+
+/* =================================
+   ORDER STATUS BADGES
+================================= */
+
+.order-status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #997404;
+    background-color: #fff3cd;
+}
+
+.status-confirmed {
+    color: #084298;
+    background-color: #cfe2ff;
+}
+
+.status-shipped {
+    color: #59359a;
+    background-color: #e2d9f3;
+}
+
+.status-completed {
+    color: #146c43;
+    background-color: #d1e7dd;
+}
+
+.status-cancelled {
+    color: #b02a37;
+    background-color: #f8d7da;
+}
+
+
+/* =================================
+   DASHBOARD FOOTER
+================================= */
+
+.admin-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 0;
+    border-top: 1px solid #eeeeee;
+}
+
+.admin-footer p {
+    font-size: 11px;
+    color: #999999;
+    margin: 0;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 991px) {
+
+    .dashboard-content {
+        padding: 25px;
+    }
+
+    .analytics-card h3 {
+        font-size: 22px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .dashboard-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-heading h2 {
+        font-size: 20px;
+    }
+
+    .dashboard-section {
+        padding: 20px;
+    }
+
+    .stat-card,
+    .analytics-card {
+        padding: 18px;
+    }
+
+    .stat-card h3 {
+        font-size: 25px;
+    }
+
+    .analytics-card h3 {
+        font-size: 22px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .dashboard-content {
+        padding: 20px 15px;
+    }
+
+    .dashboard-heading h2 {
+        font-size: 18px;
+    }
+
+    .dashboard-heading p {
+        font-size: 11px;
+    }
+
+    .dashboard-section {
+        padding: 16px;
+    }
+
+    .section-heading h4 {
+        font-size: 14px;
+    }
+
+    .stat-card,
+    .analytics-card {
+        padding: 16px;
+    }
+
+    .stat-card h3,
+    .analytics-card h3 {
+        font-size: 21px;
+    }
+
+    .quick-action-card {
+        min-height: 110px;
+    }
+
+    .admin-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}

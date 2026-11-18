@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase | Manage Products</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="../css/admin/admin.css">
+
+    <!-- Products CSS -->
+    <link rel="stylesheet" href="../css/admin/products.css">
+
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="admin-sidebar" id="admin-sidebar">
+
+            <!-- Brand -->
+
+            <div class="admin-brand">
+                <a href="dashboard.html">
+                    <!-- <i class="bi bi-shop"></i> -->
+                    Shop<span>Ease</span>
+                </a>
+                <p>ADMIN PANEL</p>
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="admin-navigation">
+
+                <p class="sidebar-heading">MAIN MENU</p>
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="products.html" class="sidebar-link active">
+                    <i class="bi bi-box-seam"></i>
+                    <span>Products</span>
+                </a>
+
+                <a href="categories.html" class="sidebar-link">
+                    <i class="bi bi-tags"></i>
+                    <span>Categories</span>
+                </a>
+
+
+                <p class="sidebar-heading management-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="users.html" class="sidebar-link">
+                    <i class="bi bi-people"></i>
+                    <span>Users</span>
+                </a>
+
+                <a href="orders.html" class="sidebar-link">
+                    <i class="bi bi-cart-check"></i>
+                    <span>Orders</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <a href="../index.html" class="sidebar-link">
+                    <i class="bi bi-shop-window"></i>
+                    <span>Visit Store</span>
+                </a>
+
+                <button class="sidebar-link logout-link" id="admin-logout-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================
+                 TOPBAR
+            ================================== -->
+
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div>
+                        <h5>Products</h5>
+                        <p>Manage your store products</p>
+                    </div>
+                </div>
+                <div class="topbar-right">
+
+                    <div class="admin-profile">
+
+                        <div class="admin-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div class="admin-profile-info">
+                            <h6 id="admin-name">Administrator</h6>
+                            <span>Admin</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </header>
+
+
+            <!-- =================================
+                 PRODUCTS CONTENT
+            ================================== -->
+
+            <section class="products-content">
+
+
+                <!-- Page Heading -->
+
+                <div class="products-heading">
+
+                    <div>
+                        <h2>Product Management</h2>
+                        <p>View, add, edit and delete your products.</p>
+                    </div>
+
+                    <a href="add-product.html" class="add-product-btn">
+                        <i class="bi bi-plus-lg"></i>
+                        Add Product
+                    </a>
+
+                </div>
+
+
+                <!-- =================================
+                     PRODUCT STATISTICS
+                ================================== -->
+
+                <div class="row g-3 product-stats">
+
+                    <div class="col-md-4">
+
+                        <div class="product-stat-card">
+
+                            <div class="product-stat-icon">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+
+                            <div>
+                                <p>Total Products</p>
+                                <h4 id="product-count">--</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="product-stat-card">
+
+                            <div class="product-stat-icon stock-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+
+                            <div>
+                                <p>In Stock</p>
+                                <h4 id="in-stock-count">--</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="product-stat-card">
+
+                            <div class="product-stat-icon out-stock-icon">
+                                <i class="bi bi-exclamation-circle"></i>
+                            </div>
+
+                            <div>
+                                <p>Out of Stock</p>
+                                <h4 id="out-stock-count">--</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     PRODUCTS TABLE
+                ================================== -->
+
+                <div class="products-table-section">
+
+                    <div class="products-table-heading">
+
+                        <div>
+                            <h4>All Products</h4>
+                            <p>Manage your available products.</p>
+                        </div>
+
+                        <div class="product-search">
+
+                            <i class="bi bi-search"></i>
+
+                            <input type="text"
+                                id="product-search"
+                                placeholder="Search products...">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Table -->
+
+                    <div class="table-responsive">
+
+                        <table class="table products-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="products-container">
+
+                                <tr>
+                                    <td colspan="5" class="text-center">
+                                        Loading products...
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- Empty Search Message -->
+
+                    <div id="no-products-message" class="no-products-message d-none">
+
+                        <i class="bi bi-search"></i>
+
+                        <h5>No products found</h5>
+
+                        <p>Try searching with a different product name.</p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================
+                 FOOTER
+            ================================== -->
+
+            <footer class="admin-footer">
+
+                    <p>
+                        &copy; 2026 ShopEase. All Rights Reserved.
+                    </p>
+
+                    <p>
+                        Admin Dashboard
+                    </p>
+
+                </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =================================
+         SCRIPTS
+    ================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/admin/admin.js"></script>
+
+    <script src="../js/admin/products.js"></script>
+
+</body>
+
+</html>

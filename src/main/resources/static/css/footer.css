@@ -1,0 +1,61 @@
+/* =================================
+   SHOP EASE FOOTER
+================================= */
+
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 45px 0 25px;
+    margin-top: 50px;
+}
+
+.footer h4 {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer h5 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--light-color);
+}
+
+.footer p {
+    color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer a {
+    color: #cccccc;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+.footer hr {
+    border-color: #555555;
+    margin: 25px 0;
+}
+
+.footer .copyright {
+    color: #aaaaaa;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 576px) {
+
+    .footer {
+        padding: 35px 0 20px;
+        text-align: center;
+    }
+}
